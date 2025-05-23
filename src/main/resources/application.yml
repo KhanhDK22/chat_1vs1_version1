@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      username: kdao2003
+      password: kdao2003
+      host: localhost
+      port: 27017
+      database: chat_app
+      authentication-database: admin
+      uri: mongodb://kdao2003:kdao2003@localhost:27017/admin
+server:
+  port: 8088
