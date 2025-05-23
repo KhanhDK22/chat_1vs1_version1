@@ -1,4 +1,4 @@
-package com.chat_1vs1_v1.user;
+package com.chat_1vs1_v1.user.entity;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,5 +1,6 @@
-package com.chat_1vs1_v1.chat;
+package com.chat_1vs1_v1.chat.repository;
 
+import com.chat_1vs1_v1.chat.entity.ChatMessage;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

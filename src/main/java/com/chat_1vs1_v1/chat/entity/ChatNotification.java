@@ -1,4 +1,4 @@
-package com.chat_1vs1_v1.chat;
+package com.chat_1vs1_v1.chat.entity;
 
 import lombok.*;
 

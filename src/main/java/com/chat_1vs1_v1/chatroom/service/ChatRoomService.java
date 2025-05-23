@@ -1,5 +1,7 @@
-package com.chat_1vs1_v1.chatroom;
+package com.chat_1vs1_v1.chatroom.service;
 
+import com.chat_1vs1_v1.chatroom.entity.ChatRoom;
+import com.chat_1vs1_v1.chatroom.repository.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

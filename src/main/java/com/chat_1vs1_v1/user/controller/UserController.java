@@ -1,5 +1,7 @@
-package com.chat_1vs1_v1.user;
+package com.chat_1vs1_v1.user.controller;
 
+import com.chat_1vs1_v1.user.service.UserService;
+import com.chat_1vs1_v1.user.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;

@@ -1,7 +1,9 @@
-package com.chat_1vs1_v1.user;
+package com.chat_1vs1_v1.user.service;
 
+import com.chat_1vs1_v1.user.entity.Status;
+import com.chat_1vs1_v1.user.entity.User;
+import com.chat_1vs1_v1.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
