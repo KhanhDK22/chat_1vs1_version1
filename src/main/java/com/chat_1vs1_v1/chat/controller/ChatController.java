@@ -3,6 +3,7 @@ package com.chat_1vs1_v1.chat.controller;
 import com.chat_1vs1_v1.chat.entity.ChatMessage;
 import com.chat_1vs1_v1.chat.service.ChatMessageService;
 import com.chat_1vs1_v1.chat.entity.ChatNotification;
+import com.chat_1vs1_v1.common.DataResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -35,9 +36,10 @@ public class ChatController {
     }
 
     @GetMapping("/messages/{senderId}/{recipientId}")
-    public ResponseEntity<List<ChatMessage>> findChatMessages(@PathVariable String senderId,
+    public ResponseEntity<?> findChatMessages(@PathVariable String senderId,
                                                               @PathVariable String recipientId) {
-        return ResponseEntity
-                .ok(chatMessageService.findChatMessages(senderId, recipientId));
+        List<ChatMessage> messages = chatMessageService.findChatMessages(senderId, recipientId);
+
+        return DataResponse.setDataSearchSuccess(messages, "success");
     }
 }

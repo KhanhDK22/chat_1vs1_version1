@@ -1,5 +1,6 @@
 package com.chat_1vs1_v1.user.controller;
 
+import com.chat_1vs1_v1.common.DataResponse;
 import com.chat_1vs1_v1.user.service.UserService;
 import com.chat_1vs1_v1.user.entity.User;
 import lombok.RequiredArgsConstructor;
@@ -39,7 +40,9 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>> findConnectedUsers() {
-        return ResponseEntity.ok(userService.findConnectedUsers());
+    public ResponseEntity<?> findConnectedUsers() {
+        List<User> users = userService.findConnectedUsers();
+
+        return DataResponse.setDataSearchSuccess(users, "success");
     }
 }
